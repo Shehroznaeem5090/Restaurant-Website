@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            color: white;
+        }
+        .navbar button{
+            background-color: orange;
+            padding: 7px 17px;
+            border-radius:5px;
+            font-size:medium;
+        }
+        .navmenu ul li {
+            list-style-type: none;
+            display: inline;
+            padding: 5px 15px;
+            font-size: large;
+
+        }
+        .navmenu li:hover{
+           color: orange;
+        }
+        .main {
+
+            margin: 100px;
+            text-align: center;
+        }
+
+        .menu-details {
+            display: flex;
+            align-items: center;
+            margin-left: 25%;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        header {
+            background-image: url(pexels-hasan-kurt-154798938-10749578.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            padding: 20px;
+            color: white;
+            font-size:25px;
+        }
+        header .view{
+            background-color: orange;
+            border-radius: 5px;
+            border: 5px;
+            padding:8px 20px;
+        }
+        .view:hover{
+            color: orange;
+            border: 2px solid;
+            background-color: transparent;
+        }
+        header .watch{
+            color: orange;
+            border: 2px solid;
+            background-color: transparent;
+            padding:8px 20px;
+            border-radius: 5px;
+        }
+        .watch:hover{
+            color:black;
+            background-color: orange;
+            border: none;
+        }
+        .menu-details button{
+            background-color: orange;
+            border-radius: 5px;
+            padding:7px 28px;
+        }
+        #person
+        {   color: rgb(255, 255, 255);
+            border: 5px rgb(255, 255, 255);
+            border-radius: 5px;
+            padding: 7px 15px;
+            background-color:orange;
+        }
+        #Date{
+            color: rgb(255, 255, 255);
+            border: 5px;
+            border-radius: 5px;
+            padding: 7px 15px;
+            background-color:orange;
+        }
+        #time{
+            color: rgb(255, 255, 255);
+            border: 5px;
+            border-radius: 5px;
+            padding: 7px 15px;
+            background-color:orange;
+        }
+        span{
+            color: orange;
+        }
+        .section2 {
+            background-color: beige;
+            margin: 0%;
+            display: flex;
+            width: 100%;
+            height: 600px;
+            padding: 130px;
+            justify-content: center;
+
+        }
+
+        .imagecard img {
+            width: 500px;
+            height: 350px;
+            margin-left: 15%;
+
+
+        }
+
+        .textcard {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 25px;
+            width: 350px;
+            height: 200px;
+            margin-top: 150px;
+
+        }
+        .section2 h3{
+            text-align: left;
+            margin-bottom: 3px;
+        }
+        .section2 button{
+            background-color: orange;
+            padding: 5px 15px;
+            border-radius: 6px;
+        }
+        .section3 {
+            background-color: beige;
+            display: flex;
+            justify-content: space-evenly;
+            text-align: left;
+        }
+
+        .section3 button {
+            margin-top: 5px;
+            background-color: black;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 8px;
+        }
+
+        .section4 {
+            width: 100%;
+            height: 600px;
+            background-color: beige;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 200px;
+
+
+
+        }
+
+        .section4 #card1 {
+            padding: 18px 18px;
+            width: 250px;
+            height: 250px;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .section4 #card1 h3,
+        p,
+        a {
+            margin-bottom: 10px;
+
+        }
+
+        .section4 #card2 {
+            padding: 18px 18px;
+            width: 250px;
+            height: 250px;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border-radius: 10px;
+        }
+
+        .section4 #card2 h3,
+        p,
+        a {
+            margin-bottom: 10px;
+        }
+
+        .section4 #card3 {
+            padding: 18px 18px;
+            width: 250px;
+            height: 250px;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+            color: rgb(2, 2, 2);
+            border-radius: 10px;
+        }
+
+        .section4 #card3 h3,
+        p,
+        a {
+            margin-bottom: 10px;
+        }
+
+        .section4 img {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 50px;
+            background-color: orange;
+            border-radius: 4px;
+        }
+
+        .section4 a {
+            text-decoration: none;
+            color: orange;
+        }
+
+        .section5 {
+            padding: 100px;
+            background-image: url(pexels-hasan-kurt-154798938-10749578.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 600px;
+            color: white;
+
+
+        }
+
+        .square1 {
+            display: flex;
+            align-items: end;
+            width: 500px;
+            height: 50px;
+            float: left;
+            margin: 50px;
+
+
+        }
+
+        .square1 img {
+            width: 70px;
+            padding: 5px;
+            background-color: orange;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        .square2 {
+            display: flex;
+            align-items: end;
+            width: 500px;
+            height: 50px;
+            float: right;
+            margin: 50px;
+
+        }
+
+        .square2 img {
+            width: 70px;
+            padding: 10px;
+            background-color: orange;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        .square3 {
+            display: flex;
+            align-items: end;
+            width: 500px;
+            height: 50px;
+            float: left;
+            margin: 50px;
+
+        }
+
+        .square3 img {
+            width: 70px;
+            padding: 10px;
+            background-color: orange;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        .square4 {
+            display: flex;
+            align-items: end;
+            width: 500px;
+            height: 50px;
+            float: right;
+            margin: 50px;
+
+        }
+
+        .square4 img {
+            width: 70px;
+            padding: 10px;
+            background-color: orange;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        .sec5para {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+      
+      
+        .smartfooter{
+            padding: 25px ;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: rgb(2, 2, 2);
+            color: white;
+
+        }
+        .footer1{
+            width: 300px;
+            height: 300px;
+            padding: 5px;
+        }
+        .location{
+            display: flex;
+        }
+        .location img{
+            width: 30px;
+            height: 30px;
+        }
+        .footimg img{
+            width: 40px;
+            margin-right: 10px;     
+            background-color: orange;
+            border-radius:10px ;
+            padding: 5px;
+        }
+        .footline{
+            width: 100%;
+            justify-content:end;
+            color: white;
+            background-color: black;
+            padding:10px 25px;
+            text-align: center;
+            border-color: orange;
+            border-top: 25px;
+        
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="conatainer">
+            <div class="navbar">
+                <div>
+                    <p>Good Taste <br>-Restaurant-
+                    </p>
+                </div>
+                <div class="navmenu">
+                    <ul>
+                        <li>Home</li>
+                        <li>Services</li>
+                        <li>Menu</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+
+                <div><button>Contact Us</button></div>
+
+            </div>
+        </div>
+
+        <div class="main">
+            <h1>Fresh Flowers <br><span>Made with Love</span> </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Voluptas unde aut, deserunt a soluta neque
+                rem
+                impedit quis, <br>id ab similique.</p>
+            <br>
+            <br>
+            <div><button class="view">View Menu</button> <button class="watch">Watch Video</button></div>
+        </div>
+
+        <div class="menu-details">
+            <div>
+                <h4>Book a Menu</h4>
+            </div>
+            <div><input type="number" name="Person" id="person" placeholder="Person"></div>
+            <div><input type="date" name="date" id="Date" placeholder="Date"></div>
+            <div><input type="time" name="time" id="time" placeholder="Time"></div>
+            <button>Submit</button>
+        </div>
+    </header>
+
+
+    <div class="section2">
+        <div class="imagecard">
+            <img src="food-4k-spdnpz7bhmx4kv2r.jpg" alt="">
+        </div>
+        <div class="textcard">
+            <h3>
+                Welcome to the best <br>
+                <span>restaurant in town</span>         
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus est quo ea doloribus, voluptatum nam
+                aliquid veritatis dicta non in.</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+
+    <div class="section3">
+        <div>
+            <p>Lorem ipsum dolor.</p>
+            <h2>Lorem ipsum dolor <br>sit amet consectetur.</h2>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Iure iste iusto odit sed eius atque dicta
+                <br>ab nulla,
+                accusamus corporis?</p>
+            <button>Let's Get Started</button>
+        </div>
+    </div>
+    <div class="section4">
+
+        <div id="card1">
+            <img src="restaurant-cutlery-symbol-of-a-cross.png" alt="">
+            <h3>Lorem ipsum dolor</h3>
+            <p>Lorem, ipsum dolor sit amet <br>adipisicing elit. Aspernatur <br> consectetur ipsum!</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div id="card2">
+            <img src="chef.png" alt="">
+            <h3>Lorem ipsum dolor</h3>
+            <p>Lorem, ipsum dolor sit amet <br>adipisicing elit. Aspernatur <br> consectetur ipsum!</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div id="card3">
+            <img src="bell.png" alt="">
+            <h3>Lorem ipsum dolor</h3>
+            <p>Lorem, ipsum dolor sit amet <br>adipisicing elit. Aspernatur <br> consectetur ipsum!</p>
+            <a href="#">Learn More</a>
+        </div>
+    </div>
+    <div class="section5">
+        <div class="sec5para">
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <h2>Lorem ipsum, dolor sit <span>amet consectetur adipisicing.</span></h2>
+        </div>
+        <div class="square1">
+            <div><img src="bell.png" alt=""></div>
+            <div>
+                <h3>Lorem Ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br>Quo voluptatum ducimus necessitatibus
+                    saepe dolorem sint!</p>
+            </div>
+        </div>
+
+
+        <div class="square2">
+            <div><img src="food.png" alt=""></div>
+            <div>
+                <h3>Lorem Ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br>Quo voluptatum ducimus necessitatibus
+                    saepe dolorem sint!</p>
+            </div>
+        </div>
+
+
+        <div class="square3">
+            <div><img src="restaurant-cutlery-symbol-of-a-cross.png" alt=""></div>
+            <div>
+                <h3>Lorem Ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br>Quo voluptatum ducimus necessitatibus
+                    saepe dolorem sint!</p>
+            </div>
+        </div>
+
+
+        <div class="square4">
+            <div><img src="chef.png" alt=""></div>
+            <div>
+                <h3>Lorem Ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit <br>Quo voluptatum ducimus necessitatibus
+                    saepe dolorem sint!</p>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="smartfooter">
+        <div class="footer1">
+            <h1>GoodTaste</h1>
+            <h3 >-Restaurant-</h3>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, corrupti deleniti deserunt iure
+                temporibus magnam atque autem amet nam ipsam maxime!
+            </p>
+            <div class="location">
+                <img src="placeholder.png" alt="">
+                <p>Lorem ipsum, dolor sit amet consectetur <br> adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="footer2">
+            <h2>OPENING HOURS</h2>
+            <br>
+            <h4>Mon-thurs</h4>
+            <p>08:00 AM - 11:00 PM</p>
+            <br>
+            <h4>Fri-Sat</h4>
+            <p>11:00 AM - 09:00 PM</p>
+            <br>
+            <h4>Sunday</h4>
+            <p>Closed</p>
+        </div>
+        <div class="footer3">
+            
+            <h2>CONNECT WITH US</h2>
+            <br>
+            
+              <h4>Catering</h4>
+            <p>(021)123456789 </p>
+            <br>
+            <h4>Office</h4>
+            <p>(021)123456789 </p>
+            <br>
+            <div class="footimg">
+                <img src="facebook (1).png" alt=""><img src="instagram.png" alt=""><img src="whatsapp.png" alt=""><img src="youtube.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="footline">
+        <hr>
+        <br>
+        <p>&copy; 2024 Good Taste Restaurant. All rights reserved.</p>
+    </div>
+    </footer>
+   
+</body>
+
+</html>
